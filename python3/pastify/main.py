@@ -44,7 +44,7 @@ class Pastify(object):
 
         if options['save'] == "local":
             file_name = ""
-            if options['radom_name']:
+            if options['random_name']:
                 file_name = date.today().strftime("%Y%m%d-%H%M%S")
             else:
                 file_name = vim.exec_lua(
