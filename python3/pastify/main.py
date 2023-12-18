@@ -1,4 +1,4 @@
-from datetime import date
+from datetime import datetime
 from .type import Config
 from .validate import validate_config
 from PIL import ImageGrab
@@ -45,7 +45,7 @@ class Pastify(object):
         if options['save'] == "local":
             file_name = ""
             if options['random_name']:
-                file_name = date.today().strftime("%Y%m%d-%H%M%S")
+                file_name = datetime.today().strftime("%Y%m%d-%H%M%S")
             else:
                 file_name = vim.exec_lua(
                     "return vim.fn.input('File Name? ', '')")
